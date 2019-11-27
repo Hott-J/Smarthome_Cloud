@@ -17,6 +17,9 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setup(Red,GPIO.OUT)
+GPIO.setup(yellow,GPIO.OUT)
+GPIO.setup(green,GPIO.OUT)
+
 GPIO.output(Red,0)
 GPIO.output(yellow,0)
 GPIO.output(green,0)
@@ -33,11 +36,16 @@ try:
             if humidity is not None and temperature is not None:
                 if temperature >=27:
                     GPIO.output(Red,1)
-            
+                    GPIO.output(yellow,0)
+                    GPIO.output(green,0)
                 elif temperature <=17:
                     GPIO.output(green,1)
+                    GPIO.output(Red,0)
+                    GPIO.output(yellow,0)
                 else:
                     GPIO.output(yellow,1)
+                    GPIO.output(red,0)
+                    GPIO.output(green,0)
             data.add_reading(reading_time,'{0} Humidity'.format(sensor.name),humidity)
             data.add_reading(reading_time,'{0} temperature'.format(sensor.name),temperature)
         time.sleep(2.0)
