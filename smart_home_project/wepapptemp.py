@@ -14,7 +14,7 @@ class MyView(BaseView):
         return self.render('temp.html')
 
 app=Flask(__name__)
-app.config['SECRET_KEY']='20150333'
+app.config['SECRET_KEY']='HakJae'
 app.config['MODEL']=model.DHTData()
 
 admin=Admin(app,name='SQLite Sensors',template_mode='bootstrap3')
