@@ -23,7 +23,7 @@ p.start(0)
 app = Flask(__name__)
 
 @app.route("/")
-def home():
+def main():
     return render_template('motor.html')
  
 @app.route("/test", methods=["POST"])
