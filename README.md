@@ -1,5 +1,7 @@
 # Smarthome
 
+![image](https://user-images.githubusercontent.com/47052106/69841527-e4bfd300-12a2-11ea-8faa-ee6a75ed7640.png)
+
 ## 개요
 2019 오픈소스기초설계 과목 프로젝트이다.
 
