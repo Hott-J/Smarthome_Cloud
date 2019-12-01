@@ -1,0 +1,20 @@
+<html>
+    <head><title>Door Management</title></head>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+    <body>
+	<h1>SMART_CCTV</h1>
+	<img src="{{ url_for('video_feed') }}"  style="width:400px height:400px;">
+	<br>
+	<br>
+	<button>CCTV_ON</button>
+    {% if msg %}
+    <h2>{{ msg }}</h2>
+    {% endif %}
+    <h2>DOOR Management</h2>
+        <form method="POST" action="test">
+            <p>DOOR<input type="range" min="5" max="13" name="slider1" /> </p>
+            <input type="submit" value="submit" />
+        </form>
+    </body>
+</html>
