@@ -4,21 +4,10 @@ from time import sleep
 from camera import Camera 
 
 servo = 26          
-
- 
 GPIO.setmode(GPIO.BOARD)      
-
 GPIO.setup(servo, GPIO.OUT)     
-
- 
-
 p = GPIO.PWM(servo, 100)
-
- 
-
 p.start(0)
-
- 
 
 app = Flask(__name__)
 
@@ -28,11 +17,8 @@ def main():
 
 @app.route("/test", methods=["POST"])
 def test():
-
     slider1 = request.form["slider1"]
-
     p.ChangeDutyCycle(float(slider1))
-
     sleep(1)
     p.ChangeDutyCycle(0)
     return render_template('CCTV_Open.html')
