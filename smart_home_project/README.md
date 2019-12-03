@@ -1,4 +1,3 @@
-# RPiPetFeeder
-Pet Feeder by Raspberry Pi
+# _CCTV_Open.py
 
-I made this from [miguelgrinberg/flask-video-streaming](https://github.com/miguelgrinberg/flask-video-streaming).
+pi camera를 이용하여 cctv 기능을 하고, 서보모터를 이용해 문을 여닫는 웹서버이다.
